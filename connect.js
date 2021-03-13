@@ -1,4 +1,4 @@
-  const WIDTH = 7;
+const WIDTH = 7;
     const HEIGHT = 7;
     const gameBoard = [];
     
@@ -36,8 +36,9 @@
             }
             this.msg = msg;
             this.playerOne = msg.author.id;
-            this.playerTwo = msg.guild.member(msg.mentions.users.first()).user.id;
+            this.playerTwo = msg.guild.member(msg.mentions.users.first())
             if(!this.playerTwo)return message.channel.send("Il n'y a pas de deuxième joueur")
+            this.playerTwo = this.playerTwo.user.id;
             this.player = this.playerOne;
             this.inGame = true;
             const embed = new Discord.MessageEmbed()
