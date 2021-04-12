@@ -1,5 +1,5 @@
 # YO les niridyens 
-Ici y a la version 2 des jeux snake et puissance 4
+Ici y a la version 2 des jeux snake, puissance 4 et morpion
 
 
 C'est pour Tanjiro et Xdela
