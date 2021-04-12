@@ -36,9 +36,9 @@ const WIDTH = 7;
             }
             this.msg = msg;
             this.playerOne = msg.author.id;
-            this.playerTwo = msg.guild.member(msg.mentions.users.first())
+            this.playerTwo = msg.guild.member(msg.mentions.users.first())?  msg.guild.member(msg.mentions.users.first())user.id : null;
             if(!this.playerTwo)return message.channel.send("Il n'y a pas de deuxième joueur")
-            this.playerTwo = this.playerTwo.user.id;
+          
             this.player = this.playerOne;
             this.inGame = true;
             const embed = new Discord.MessageEmbed()
